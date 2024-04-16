@@ -1,4 +1,14 @@
+import { TaskList } from "@/components/tasks";
+
 export default function Home() {
+const tasks =[{
+  isfinish:false, content:"Task 1"
+},{
+  isfinish:true, content:"Task 2"
+}
+
+]
+
   return (
     <div>
       ToDo Container
@@ -8,7 +18,7 @@ export default function Home() {
         <div>add task</div>
         <div>task filter</div>
       </div>
-      <div>Task List</div>
+      <TaskList tasks={tasks} />
     </div>
   );
 }
