@@ -16,11 +16,17 @@ npm run dev
 ```
 Open your browser and go to `http://localhost:3000` to see the project running.
 
+## Runing Locally
+You need to set up the node (Node version 18+) environment to run this app
+
+Then run the commands above
+
 ## TODO
 - [x] Setup the skeleton of the project
-- [ ] Filter Component
-- [ ] Add Todo Component
-- [ ] Todo List Component
-    - [ ] Todo Item Component
+- [ ] getFilteredTasks function
+- [ ] addTask function
+- [ ] deleteTask Function
+- [ ] toggleTaskFunction
+- [ ] bind input value in the AddTask component
 - [ ] Persist data in LocalStorage
 - [ ] Make the app prettier! (Optional)
