@@ -40,7 +40,7 @@ const HomePage = () => {
     setTasks([...tasks, newTask]);
   };
 
-  // create a deleteTask function
+  // deleteTask function
   const deletedTask = (id: number) => {
     const updatedTasks = tasks.filter(task => task.id !== id);
     setTasks(updatedTasks);
@@ -57,8 +57,13 @@ const HomePage = () => {
     setTasks(updatedTasks);
   };
 
-  const getFilteredTasks = () => {
-    return tasks;
+  const getFilteredTasks = () => { //add functionality to the active and completed buttons
+    return tasks.filter(task => {
+      if(filter === "All") return true;
+      if(filter === "Active") return !task.completed;
+      if(filter === "Completed") return task.completed;
+    }
+    );
   };
 
   return (
