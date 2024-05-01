@@ -26,7 +26,7 @@ Then run the commands above
 - [ ] getFilteredTasks function
 - [x] addTask function
 - [ ] deleteTask Function
-- [ ] toggleTaskFunction
+- [x] toggleTaskFunction
 - [ ] bind input value in the AddTask component
 - [ ] Persist data in LocalStorage
 - [ ] Make the app prettier! (Optional)
