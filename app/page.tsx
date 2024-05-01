@@ -40,8 +40,10 @@ const HomePage = () => {
     setTasks([...tasks, newTask]);
   };
 
+  // create a deleteTask function
   const deletedTask = (id: number) => {
-    // TODO
+    const updatedTasks = tasks.filter(task => task.id !== id);
+    setTasks(updatedTasks);
   };
 
   const toggleTask = (id: number) => {
