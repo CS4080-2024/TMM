@@ -23,10 +23,10 @@ Then run the commands above
 
 ## TODO
 - [x] Setup the skeleton of the project
-- [ ] getFilteredTasks function
+- [x] getFilteredTasks function
 - [x] addTask function
-- [ ] deleteTask Function
+- [x] deleteTask Function
 - [x] toggleTaskFunction
-- [ ] bind input value in the AddTask component
+- [x] bind input value in the AddTask component
 - [ ] Persist data in LocalStorage
 - [ ] Make the app prettier! (Optional)
