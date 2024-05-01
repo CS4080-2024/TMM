@@ -13,7 +13,7 @@ export const TaskItem = ({ task, toggleTask, deleteTask }: TaskItemProps) => {
         <input
           type="checkbox"
           className="h-7 w-7"
-          checked={task.completed}
+          defaultChecked={task.completed}
           onClick={() => {
             toggleTask(task.id);
           }}

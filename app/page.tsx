@@ -69,7 +69,7 @@ const HomePage = () => {
         </header>
 
         <main className="flex flex-col w-full max-w-2xl gap-y-4 p-4">
-          <AddTask />
+          <AddTask addTask={addTask} />
           <Filter setFilter={setFilter} />
           <TaskList
             tasks={getFilteredTasks()}

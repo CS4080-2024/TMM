@@ -1,12 +1,31 @@
 "use client";
+import React, { useState } from "react";
+import { Task } from "@/types";
 
-export const AddTask = () => {
+interface AddTaskProps {
+  addTask: (content: string) => void;
+}
+
+export const AddTask: React.FC<AddTaskProps> = ({ addTask }) => {
   //TODO: useState to keep track of the value in the input
+  const [task, setTask] = useState('');
+  const [title, setTitle] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const Task = {
+      
+    }
 
+    if(task.trim() === '') return;
     // TODO: call addTask
+    addTask(task)
+
+    setTask('');
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTask(e.target.value);
   };
 
   return (
@@ -18,10 +37,8 @@ export const AddTask = () => {
             placeholder="What needs to be done?"
             className="flex-1 appearance-none rounded-l border border-gray-300 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
             // TODO: bind value
-            value={""}
-            onChange={() => {
-              // TODO: update values
-            }}
+            value={task}
+            onChange={handleChange}
           />
           <button
             type="submit"

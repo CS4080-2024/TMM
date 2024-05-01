@@ -24,7 +24,7 @@ Then run the commands above
 ## TODO
 - [x] Setup the skeleton of the project
 - [ ] getFilteredTasks function
-- [ ] addTask function
+- [x] addTask function
 - [ ] deleteTask Function
 - [ ] toggleTaskFunction
 - [ ] bind input value in the AddTask component
