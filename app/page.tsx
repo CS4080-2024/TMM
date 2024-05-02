@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { AddTask } from "@/components/add-task";
 import { Filter } from "@/components/filter";

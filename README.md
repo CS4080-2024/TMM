@@ -28,5 +28,5 @@ Then run the commands above
 - [x] deleteTask Function
 - [x] toggleTaskFunction
 - [x] bind input value in the AddTask component
-- [ ] Persist data in LocalStorage
+- [x] Persist data in LocalStorage
 - [ ] Make the app prettier! (Optional)
