@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef} from "react";
 
 import { AddTask } from "@/components/add-task";
 import { Filter } from "@/components/filter";
@@ -8,28 +8,25 @@ import { TaskList } from "@/components/task-list";
 import { type Task } from "@/types";
 
 const HomePage = () => {
-  // TODO: persist the data in the browser local storage
-  const sampleTasks = [
-    {
-      id: 1,
-      content: "Task 1",
-      completed: true,
-    },
-    {
-      id: 2,
-      content: "Task 2",
-      completed: false,
-    },
-    {
-      id: 3,
-      content: "Task 3",
-      completed: false,
-    },
-  ];
-
-  const [tasks, setTasks] = useState<Task[]>(sampleTasks);
+  const [tasks, setTasks] = useState<Task[]>([]);
   const [filter, setFilter] = useState("All");
+  const initialRender = useRef(true);
 
+  // Load tasks from local storage
+  useEffect(() => {   
+    const storedTasks = localStorage.getItem("tasks");
+    storedTasks ? setTasks(JSON.parse(storedTasks)) : []
+  }, []);
+
+  // Save tasks to local storage
+  useEffect(() => {
+    if (initialRender.current) {
+      initialRender.current = false;
+      return;
+    }
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+  
   const addTask = (content: string) => {
     const newTask = {
       id: Date.now(),
